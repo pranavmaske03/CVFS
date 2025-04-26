@@ -21,15 +21,15 @@
 1. **Boot Block:** Its a block of 1kb size which contains the information used to start the operating system. When we press ON button of laptop or desktop the code from boot block gets executed.
 2. **Super Block:** Its a block of 1kb size which contains the information about whole file system. This block contains the information about total no. of Inodes, used Inodes, free Inodes, total no. of blocks free blocks, used blocks etc.
 3. **Disk Inode List Block (DILB):** It is a LinkedList of Inodes. Inode is considered as a structure which contains information about the file. For every file there is saperate Inode. Operating system will access the file by considering the content stored inside an Inode. 
-  - Inode contains the following:
-    - Inode number
-    - Name of the file
-    - Size of the file (allocated memory)
-    - Actual size of the file (size of data)
-    - Permission of the file
-    - Last access and modification time
-    - Link count
-    - Block number allocated to the file
+    - Inode contains the following:
+      - Inode number
+      - Name of the file
+      - Size of the file (allocated memory)
+      - Actual size of the file (size of data)
+      - Permission of the file
+      - Last access and modification time
+      - Link count
+      - Block number allocated to the file
 4. **Data Block:** This is one of the biggest section of file system. The data contains the actual data that we stored inside the file. Each block from data block is of 1kb size (1024 bytes). Inside the data block there is no information about the file.
 
   #### This concept of file system is applicable in any type of operating system. All the above information related to the hare disk only.
