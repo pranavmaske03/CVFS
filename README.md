@@ -13,4 +13,4 @@
 
 ## Architecture Overview
 
-![File System structure-hardisk](images/filesystem-hardisk.jpeg)
+![File System structure-hardisk](images/cvfs-structure.jpeg)
