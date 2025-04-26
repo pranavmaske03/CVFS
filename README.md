@@ -11,6 +11,7 @@
 - In this project we implement almost every related system call used in file manipulation activity along with some important commands.
 - This is research based project developed to understand internals of an operating system & explore the data structures implementation from c programming.
 
-## Architecture Overview
-
+## FileSystem Layout (Hard disk)
 ![File System structure-hardisk](images/cvfs-structure.jpeg)
+
+
