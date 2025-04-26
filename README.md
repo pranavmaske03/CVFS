@@ -17,6 +17,21 @@
 
 #### The above diagram indicates the file system layout on the hard disk.
 - The FileSystem is divided into four parts.
-  1. **Boot block:** Its a block of 1kb size which contains the information used to start the operating system. When we press ON button of laptop
-     or desktop the code from boot block gets executed.
   
+  - **Boot Block:** Its a block of 1kb size which contains the information used to start the operating system. When we press ON button of laptop or desktop the code from boot block gets executed.
+  - **Super Block:** Its a block of 1kb size which contains the information about whole file system. This block contains the information about total no. of Inodes, used Inodes, free Inodes, total no. of blocks free blocks, used blocks etc.
+  - **Disk Inode List Block (DILB):** It is a LinkedList of Inodes. Inode is considered as a structure which contains information about the file. For every file there is saperate Inode. Operating system will access the file by considering the content stored inside an Inode.
+  - Inode contains below in it -
+
+    1. Inode number.
+    2. Name of file.
+    3. Size of file (allocated memory).
+    4. Actual sizeof file (size of data).
+    5. Permission of that file.
+    6. Last access and modification time.
+    7. Link count.
+    8. Block number allocated to the file.
+
+  - **Data Block:** This is one of the biggest section of file system. The data contains the actual data that we stored inside the file. Each block from data block is of 1kb size (1024 bytes). Inside the data block there is no information about the file.
+ 
+    #### This concept of file system is applicable in any type of operating system. All the above information related to the hare disk only.
