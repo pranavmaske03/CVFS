@@ -22,14 +22,14 @@
   - **Super Block:** Its a block of 1kb size which contains the information about whole file system. This block contains the information about total no. of Inodes, used Inodes, free Inodes, total no. of blocks free blocks, used blocks etc.
   - **Disk Inode List Block (DILB):** It is a LinkedList of Inodes. Inode is considered as a structure which contains information about the file. For every file there is saperate Inode. Operating system will access the file by considering the content stored inside an Inode.
   - Inode contains the following:
-    1. Inode number
-    2. Name of the file
-    3. Size of the file (allocated memory)
-    4. Actual size of the file (size of data)
-    5. Permission of the file
-    6. Last access and modification time
-    7. Link count
-    8. Block number allocated to the file
+  1. Inode number
+  2. Name of the file
+  3. Size of the file (allocated memory)
+  4. Actual size of the file (size of data)
+  5. Permission of the file
+  6. Last access and modification time
+  7. Link count
+  8. Block number allocated to the file
 
   - **Data Block:** This is one of the biggest section of file system. The data contains the actual data that we stored inside the file. Each block from data block is of 1kb size (1024 bytes). Inside the data block there is no information about the file.
  
