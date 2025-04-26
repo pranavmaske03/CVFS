@@ -59,6 +59,11 @@
 # Structure of the CVFS
 ![File System structure-harddisk](images/filesystem-hardisk.jpeg)
 
+#### The above diagram represents the complete internal structure of the Customised Virtual File System (CVFS). 
+It shows the relationship between the User File Descriptor Table (UFDT), File Tables, Inodes, and Buffers in RAM. 
+Each file's metadata and content flow is mapped, starting from the UFDT entries pointing to the File Table, which then links to Inodes and finally to the actual data in Buffers. 
+This diagram also highlights the role of the Superblock and macros, maintaining system-wide information like total inodes and file sizes.
+
 ## Conclusion
 This project provides an in-depth understanding of the internal structures of a file system and how system calls operate behind the scenes. It simulates an operating system's file subsystem in RAM, making it easier to visualize and learn the real-world architecture and data flow within an operating system.
 
