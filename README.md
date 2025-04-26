@@ -15,3 +15,8 @@
 ![File System structure-hardisk](images/cvfs-structure.jpeg)
 
 
+#### The above diagram indicates the file system layout on the hard disk.
+- The FileSystem is divided into four parts.
+  1. **Boot block:** Its a block of 1kb size which contains the information used to start the operating system. When we press ON button of laptop
+     or desktop the code from boot block gets executed.
+  
