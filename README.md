@@ -21,15 +21,15 @@
   - **Boot Block:** Its a block of 1kb size which contains the information used to start the operating system. When we press ON button of laptop or desktop the code from boot block gets executed.
   - **Super Block:** Its a block of 1kb size which contains the information about whole file system. This block contains the information about total no. of Inodes, used Inodes, free Inodes, total no. of blocks free blocks, used blocks etc.
   - **Disk Inode List Block (DILB):** It is a LinkedList of Inodes. Inode is considered as a structure which contains information about the file. For every file there is saperate Inode. Operating system will access the file by considering the content stored inside an Inode.
-  - Inode contains below in it:
-    1. Inode number.
-    2. Name of file.
-    3. Size of file (allocated memory).
-    4. Actual sizeof file (size of data).
-    5. Permission of that file.
-    6. Last access and modification time.
-    7. Link count.
-    8. Block number allocated to the file.
+    - Inode contains below in it:
+        1. Inode number.
+        2. Name of file.
+        3. Size of file (allocated memory).
+        4. Actual sizeof file (size of data).
+        5. Permission of that file.
+        6. Last access and modification time.
+        7. Link count.
+        8. Block number allocated to the file.
 
   - **Data Block:** This is one of the biggest section of file system. The data contains the actual data that we stored inside the file. Each block from data block is of 1kb size (1024 bytes). Inside the data block there is no information about the file.
  
@@ -39,6 +39,27 @@
 ## Data Structures of file subsystem of RAM.
 ![File System structure-hardisk](images/filesystem-ram.jpeg)
 
-## 1. UAREA
-  - It is called as User AREA.
-  - 
+## 1 UAREA
+  - It is called as **User AREA.**
+  - For every running process saperate UAREA gets created.
+
+## 2 UFDT
+  - It is called the **User File Descriptor Table (UFDT).**
+  - It is considered an array of pointers, where each pointer points to an entry in the file table.
+  - In the UFDT, the first three entries are reserved: one for stdin (keyboard), one for stdout (monitor), and one for stderr (monitor).
+
+## 3 File Table
+  - This table contains information about opened files. 
+  - This table contains offset from where we can read or write, it contains mode in which file is open. 
+  - It contains the field name as count which is associated with new process creation, it contains the pointer which points to IIT.
+
+## 4 IIT 
+- It is called the **Incore Inode Table**.
+- This table holds all the inodes whose files are opened by the running processes.
+- The actual inodes are stored in the DILB, but when any process opens a file, the inode of that file gets loaded into the RAM and is stored inside the **Incore Inode Table**.
+- The inode from IIT contains the information like Name of file, its Inode number, sizeof file, actual size, reference count, block number from data block etc.
+
+# Structure of the CVFS
+
+![File System structure-hardisk](images/filesystem-hardisk.jpeg)
+
